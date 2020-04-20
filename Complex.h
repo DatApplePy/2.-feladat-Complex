@@ -9,12 +9,12 @@ private:
   float _imag; //imaginary number
 
 public:
-  Complex(float, float);
+  Complex(const float& x = 0.0, const float& y = 0.0): _real(x), _imag(y){}
   ~Complex(){}
-  void setValue(float, float);
-  Complex operator+ (const Complex&) const;
-  Complex operator- (const Complex&) const;
-  Complex operator* (const Complex&) const;
-  Complex operator/ (const Complex&) const;
-  friend std::ostream& operator<< (std::ostream&, Complex&);
+  void setValue(const float& x,const float& y);
+  Complex operator+ (const Complex& z2) const;
+  Complex operator- (const Complex& z2) const;
+  Complex operator* (const Complex& z2) const;
+  Complex operator/ (const Complex& z2) const;
+  friend std::ostream& operator<< (std::ostream& o, const Complex& z);
 };

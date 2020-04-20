@@ -5,7 +5,8 @@
 class Menu
 {
 private:
-  Complex z1, z2;
+  Complex z1;
+  Complex z2;
   void Menuwrite();
   void setValue();
   void Add();
@@ -14,7 +15,7 @@ private:
   void Divide();
   void Write();
 public:
-  Menu();
+  Menu(){}
   ~Menu(){}
   void run();
 };

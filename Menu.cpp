@@ -15,40 +15,47 @@ void Menu::Menuwrite()
 void Menu::setValue()
 {
   float x, y;
-  std::cin >> x >> y;
+  std::cout << "Kerem szokozzel elvalasztva adja meg a komplex szam valos es kepzetes szamat (Pl. 5 9)!" << std::endl;
+  std::cout << "z1: "; std::cin >> x >> y;
   z1.setValue(x, y);
-  std::cin >> x >> y;
+  std::cout << "z2: "; std::cin >> x >> y;
   z2.setValue(x, y);
+  std::cout << std::endl;
 }
 
 void Menu::Add()
 {
   Complex res = z1 + z2;
-  std::cout << res;
+  std::cout << "z1 + z2 = " << res;
+  std::cout << std::endl;
 }
 
 void Menu::Subtract()
 {
   Complex res = z1 - z2;
-  std::cout << res;
+  std::cout << "z1 - z2 = " << res;
+  std::cout << std::endl;
 }
 
 void Menu::Multiply()
 {
   Complex res = z1 * z2;
-  std::cout << res;
+  std::cout << "z1 * z2 = " << res;
+  std::cout << std::endl;
 }
 
 void Menu::Divide()
 {
   Complex res = z1 / z2;
-  std::cout << res;
+  std::cout << "z1 / z2 = " << res;
+  std::cout << std::endl;
 }
 
 void Menu::Write()
 {
-  std::cout << z1;
-  std::cout << z2;
+  std::cout << "z1 = " << z1;
+  std::cout << "z2 = " << z2;
+  std::cout << std::endl;
 }
 
 void Menu::run()
@@ -58,6 +65,7 @@ void Menu::run()
   {
     Menuwrite();
     std::cin >> v;
+    std::cout << std::endl;
     switch (v)
     {
       case 1: setValue(); break;
